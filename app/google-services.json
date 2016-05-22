@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "111400792707",
+    "firebase_url": "https://project-1042067172480656127.firebaseio.com",
+    "project_id": "project-1042067172480656127",
+    "storage_bucket": "project-1042067172480656127.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:111400792707:android:9bad66ac4bae35cd",
+        "android_client_info": {
+          "package_name": "cl.ceeinf.ligababy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "111400792707-h66h31fft2o3fk83uhurs4b5hsqcgmo3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "cl.ceeinf.ligababy",
+            "certificate_hash": "85762A0733F9B438D5AC712AAFA2A1C08C787AC8"
+          }
+        },
+        {
+          "client_id": "111400792707-qkemk3spp0l62ooekcr2hgni33q19c21.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCx6lTFOodubM7z1r2-NbJsYvySb_ZzvtU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "111400792707-qkemk3spp0l62ooekcr2hgni33q19c21.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

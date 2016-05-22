@@ -1,0 +1,27 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.tabla_posiciones_1">
+
+
+    <Button
+        android:layout_width="25dp"
+        android:layout_height="35dp"
+        android:id="@+id/button_left"
+        android:background="@mipmap/ic_chevron_left_black_24dp"
+        android:singleLine="false"
+        android:layout_gravity="center_vertical|left"
+        android:layout_alignParentLeft="true"
+        android:layout_alignWithParentIfMissing="false"
+        android:gravity="center_vertical|left"
+        android:layout_centerVertical="true" />
+
+    <!-- TODO: Update blank fragment layout -->
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listaPosiciones"
+        android:layout_gravity="left|center_vertical" />
+
+</FrameLayout>
