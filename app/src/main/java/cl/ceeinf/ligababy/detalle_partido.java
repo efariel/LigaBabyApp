@@ -5,11 +5,16 @@ import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.text.LoginFilter;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
@@ -17,14 +22,16 @@ import com.google.android.gms.common.api.GoogleApiClient;
 
 import java.util.ArrayList;
 
-public class detalle_partido extends AppCompatActivity {
+import cl.ceeinf.ligababy.fragments.Login;
+
+public class detalle_partido extends AppCompatActivity implements View.OnClickListener {
 
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
     private GoogleApiClient client;
-
+    Button btnfoto;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +39,8 @@ public class detalle_partido extends AppCompatActivity {
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
 
+        btnfoto = (Button)findViewById(R.id.new_foto);
+        btnfoto.setOnClickListener(this);
 
         ListView listView = (ListView) findViewById(R.id.listView_goles);
         ArrayList<DatosGoles> arraydatos = new ArrayList<DatosGoles>();
@@ -71,21 +80,7 @@ public class detalle_partido extends AppCompatActivity {
         AdapterFotos adapterFotos = new AdapterFotos(this, arrayfotos);
 
         listView2.setAdapter(adapterFotos);
-/*
-        ListView listViewFotos = (ListView) findViewById(R.id.listView_fotos);
-        ArrayList<Fotos> arrayfotos = new ArrayList<Fotos>();
-        Fotos fotos;
 
-        //Introducir las fotos
-        fotos = new Fotos(getResources().getDrawable(R.drawable.img1));
-        arrayfotos.add(fotos);
-
-        AdapterFotos adapterFotos = new AdapterFotos(this, arrayfotos);
-
-        listView.setAdapter(adapterFotos);
-*/
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
@@ -101,7 +96,7 @@ public class detalle_partido extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.action_login:
                 // User chose the "Settings" item, show the app settings UI...
-                Intent i = new Intent(detalle_partido.this, LoginActivity.class);
+                Intent i = new Intent(detalle_partido.this, Login.class);
                 startActivity(i);
                 return true;
 
@@ -157,5 +152,11 @@ public class detalle_partido extends AppCompatActivity {
         );
         AppIndex.AppIndexApi.end(client, viewAction);
         client.disconnect();
+    }
+
+    @Override
+    public void onClick(View v) {
+        Intent i = new Intent(detalle_partido.this, nueva_foto.class);
+        startActivity(i);
     }
 }

@@ -24,4 +24,6 @@
     </string>
     <string name="hello_world" />
     <string name="title_activity_detalle_equipo">Detalle_equipo</string>
+
+    <string name="facebook_app_id">1004061373022625</string>
 </resources>

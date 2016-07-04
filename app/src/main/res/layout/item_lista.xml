@@ -12,7 +12,7 @@
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@mipmap/ic_launcher"
+            android:src="@drawable/logo2"
             android:id="@+id/image_equipo1"
             android:layout_row="0"
             android:layout_column="0"
@@ -70,7 +70,7 @@
             android:layout_above="@+id/image_equipo1"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@mipmap/ic_launcher"
+            android:src="@drawable/logo2"
             android:id="@+id/image_equipo2"
             android:layout_row="1"
             android:layout_column="0"

@@ -147,8 +147,8 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.action_login:
                 // User chose the "Settings" item, show the app settings UI...
-                Intent i = new Intent(MainActivity.this, LoginActivity.class);
-                startActivity(i);
+               // Intent i = new Intent(MainActivity.this, LoginActivity.class);
+                //startActivity(i);
                 return true;
 
            /* case R.id.action_favorite:
